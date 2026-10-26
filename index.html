@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RIO.EXE — A CIDADE VIROU ARTE</title>
+<meta name="description" content="Instalação digital interativa: dezenas de televisores CRT formam uma única paisagem em pixels do Rio de Janeiro.">
+<meta name="theme-color" content="#030106">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="intro" aria-label="Introdução">
+  <h1>RIO.EXE</h1>
+  <p>A CIDADE VIROU ARTE</p>
+  <i aria-hidden="true"></i>
+  <button class="btn" id="skip" type="button">Entrar na obra</button>
+</section>
+
+<div id="app">
+  <header>
+    <strong>RIO.EXE</strong>
+    <p id="status" role="status" aria-live="polite">Várias telas, uma só paisagem. Toque para provocar falhas.</p>
+  </header>
+  <main id="wall" aria-label="Instalação: televisores que formam juntos um panorama do Rio de Janeiro"></main>
+  <nav id="ctl" aria-label="Controles da obra">
+    <button class="btn" id="glitch" type="button" aria-pressed="false">Falha de sinal</button>
+    <button class="btn" id="pal" type="button">Cores: Neon</button>
+    <button class="btn" id="shuf" type="button">Transformar</button>
+    <button class="btn" id="intf" type="button" aria-pressed="true">Interferência</button>
+    <button class="btn" id="calm" type="button" aria-pressed="false">Reduzir movimento</button>
+    <button class="btn" id="snd" type="button" aria-pressed="false">Som</button>
+    <label class="vol">Volume <input id="vol" type="range" min="0" max="1" step=".05" value=".4" aria-label="Volume"></label>
+    <button class="btn" id="about" type="button">Sobre a criação</button>
+  </nav>
+</div>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <h2 id="dt">Sobre a criação</h2>
+  <p>RIO.EXE transforma a paisagem urbana em uma instalação digital imaginária. Telas, sinais luminosos e interferências representam a circulação de imagens e informações que conectam pessoas, espaços e experiências. Inspirada na exploração artística da tecnologia por Nam June Paik, a obra propõe uma interpretação própria do Rio de Janeiro, em que o visitante participa da transformação visual ao interagir com a instalação.</p>
+  <h3>Como interagir</h3>
+  <p>Toque em uma tela para provocar uma falha nela. “Falha de sinal” perturba a instalação inteira por alguns segundos, e a paisagem volta ao normal. “Cores” troca a paleta, “Transformar” reorganiza os televisores sem alterar o panorama, e “Reduzir movimento” congela as animações.</p>
+  <h3>Técnicas</h3>
+  <p>Uma única paisagem em pixel art é desenhada por código e dividida em recortes calculados para cada televisor. Programação em JavaScript puro, Canvas 2D, CSS, interação por mouse, toque e teclado, e som sintetizado pelo Web Audio API.</p>
+  <h3>Inspiração</h3>
+  <p>Referência conceitual: as instalações com televisores de Nam June Paik, como Electronic Superhighway (1995). Esta obra não as reproduz; Paik não criou este trabalho.</p>
+  <p class="cr">Criação autoral de Caio Ferreira Maurício da Silva</p>
+  <button class="btn" id="close" type="button">Fechar</button>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
